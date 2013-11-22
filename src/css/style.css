@@ -1,0 +1,180 @@
+body{
+color:#eee; padding:0; margin:0;
+}
+
+#parent {
+background: url(../img/bg.jpg) no-repeat;
+background-size:cover;
+overflow:hidden;
+}
+
+.roundabout-holder {
+			padding: 0;
+			margin: 0 auto;
+			height: 700px;
+			width: 80%;
+}
+
+.roundabout-moveable-item {
+	margin-top:10%;
+			height: 480px;
+			cursor: pointer;
+//			display:block;
+		}
+		
+		.roundabout-moveable-item img {
+			height: 100%;
+			width: 100%;
+		}
+		
+		.roundabout-in-focus {
+			cursor: auto;
+		}
+		
+		#carousel-descriptions {
+			list-style:none;
+			display:block;
+			width:850px;
+			margin:25px auto;
+			padding:0;
+		}
+		
+		#carousel-descriptions li {
+			font-size:24px;
+			font-weight:bold;
+			text-align:center;
+			display:none;
+		}
+		
+		#carousel-descriptions li.current {
+			display:block;
+		}
+		
+		#carousel-controls {
+			//max-width:900px;
+			width:auto;
+			margin:25px auto;
+			overflow:auto;
+			border-collapse:collapse;
+			text-align:center;
+		}
+		
+		#carousel-controls span {
+			width:100px;
+			display:inline-block;
+			font-size:14px;
+			text-align:center;
+			margin:0 5px;
+			padding:5px;
+			cursor:pointer;
+			background:#333;			
+		}
+				
+#carousel-controls .current {
+			background:#600;
+			color:;
+			border-color:#400;
+		}
+   
+    h1:after, h1:before,
+    h2:after, h2:before,
+    #twitter-follow:after, #twitter-follow:before
+    {
+        content: '';
+        position: absolute;
+    }
+    
+    /* ---------------------------------------------- */   
+    
+    h1{
+        text-align: center;
+        position: relative;
+        color: #fff;    
+        margin: 0 -30px 30px -30px;
+        padding: 10px 0; 
+        text-shadow: 0 1px rgba(0,0,0,.8);
+        background: #5c5c5c;
+        background-image: -moz-linear-gradient(rgba(255,255,255,.3), rgba(255,255,255,0));
+        background-image: -webkit-linear-gradient(rgba(255,255,255,.3), rgba(255,255,255,0));
+		background-image: -o-linear-gradient(rgba(255,255,255,.3), rgba(255,255,255,0));
+		background-image: -ms-linear-gradient(rgba(255,255,255,.3), rgba(255,255,255,0));
+        background-image: linear-gradient(rgba(255,255,255,.3), rgba(255,255,255,0));
+        -moz-box-shadow: 0 2px 0 rgba(0,0,0,.3);
+        -webkit-box-shadow: 0 2px 0 rgba(0,0,0,.3);
+        box-shadow: 0 2px 0 rgba(0,0,0,.3);
+        clear: both; // Clear the Folow me on Twitter floating element
+    }
+    
+    h1:before, h1:after
+    {
+        border-style: solid;
+        border-color: transparent;
+        bottom: -10px;
+    }
+    
+    h1:before
+    {
+        border-width: 0 10px 10px 0;
+        border-right-color: #222;
+        left: 0;
+    }
+    
+    h1:after
+    {
+        border-width: 0 0 10px 10px;
+        border-left-color: #222;
+        right: 0;
+    }    
+    
+    h2
+    {
+        font-size: 1em;
+        position: relative;
+        color: #222;
+        text-shadow: 0 1px rgba(255,255,255,.8);
+        background-color: #ccc;
+    }
+    
+    h2.left
+    {   text-align: left; 
+        margin: 0 -20px 30px -26px;
+        padding: 10px 0 10px 30px; 
+        background-image: -moz-linear-gradient(left,rgba(255,255,255,0), #fff);
+        background-image: -webkit-linear-gradient(left,rgba(255,255,255,0), #fff);
+		background-image: -o-linear-gradient(left,rgba(255,255,255,0), #fff);
+		background-image: -ms-linear-gradient(left,rgba(255,255,255,0), #fff);
+        background-image: linear-gradient(left,rgba(255,255,255,0), #fff);
+    }
+    
+    h2.right
+    {
+        text-align: right; 
+        margin: 0 -26px 30px -20px;
+        padding: 10px 30px 10px 0; 
+        background-image: -moz-linear-gradient(left,#fff, rgba(255,255,255,0));
+        background-image: -webkit-linear-gradient(left,#fff, rgba(255,255,255,0));
+		background-image: -o-linear-gradient(left,#fff, rgba(255,255,255,0));
+		background-image: -ms-linear-gradient(left,#fff, rgba(255,255,255,0));
+        background-image: linear-gradient(left,#fff, rgba(255,255,255,0));
+    }    
+    
+    h2:before, h2:after
+    {
+        border-style: solid;
+        border-color: transparent;
+        bottom: -6px;
+    }
+    
+    h2.left:before
+    {
+        border-width: 0 6px 6px 0;
+        border-right-color: #555;
+        left: 0;
+    }
+    
+    h2.right:after
+    {
+        border-width: 0 0 6px 6px;
+        border-left-color: #555;
+        right: 0;
+    }     

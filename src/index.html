@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Girls Carousel </title>
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<div id="parent">  <!--for background img only -->
+<div id="carousel">
+	<img src="img/i_1.png" alt="" class="slide" />
+	<img src="img/i_2.png" alt="" class="slide" />
+	<img src="img/i_3.png" alt="" class="slide" />
+	<img src="img/i_4.png" alt="" class="slide" />
+	<img src="img/i_5.png" alt="" class="slide" />
+	<img src="img/i_6.png" alt="" class="slide" />
+	<img src="img/i_7.png" alt="" class="slide" />
+	<img src="img/i_8.png" alt="" class="slide" />
+	<img src="img/i_9.png" alt="" class="slide" />	
+</div>
+</div> 
+<ul id="carousel-descriptions"> <!--for the names came up in my mind -->
+	<li class="desc current"><h2 class="left">Brigid Bardo 1970 - album <span style="color:red"> whatever</span></h2></li>
+	<li class="desc"><h2 class="right">Silvia Vartan</h2></li> <!--she is very good singer-->
+	<li class="desc"><h2 class="left">Olivia Newton Jones</h2></li> <!--she is famous same time with Travota -->
+	<li class="desc"><h2 class="right">John Travota</h2></li> <!--He is not a good singer-->
+	<li class="desc"><h2 class="left">Marilin Monro</h2></li>
+	<li class="desc"><h2 class="right">Jane Carpenter</h2></li>
+	<li class="desc"><h2 class="left">Brisney Color</h2></li>
+	<li class="desc"><h2 class="right">Annette Walker</h2></li> <!--she is my boss -->
+	<li class="desc"><h2 class="left">Jean Paul Bermondo <br><i> a French actor</i></h2></li> 
+</ul>
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.roundabout.js"></script>
+<script type="text/javascript">
+(function($) {
+
+var $descriptions = $('#carousel-descriptions').children('li'),
+	$controls = $('#carousel-controls').find('span'),
+	$carousel = $('#carousel')
+		.roundabout({childSelector:"img", minOpacity:1, autoplay:false, autoplayDuration:5000, autoplayPauseOnHover:true })
+		.on('focus', 'img', function() {
+			var slideNum = $carousel.roundabout("getChildInFocus");
+			
+			$descriptions.add($controls).removeClass('current');
+			$($descriptions.get(slideNum)).addClass('current');
+			$($controls.get(slideNum)).addClass('current');
+		});
+
+
+}(jQuery));
+</script>
+
+</body>
+</html>
